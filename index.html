@@ -808,6 +808,7 @@ button.danger { background: var(--pumpkin-deep); border-color: var(--pumpkin); }
   border-radius: 8px;
   max-width: 220px;
 }
+.legend .src { display: inline-block; margin-top: 4px; opacity: .8; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 
@@ -819,7 +820,7 @@ button.danger { background: var(--pumpkin-deep); border-color: var(--pumpkin); }
   <div class="progress" aria-hidden="true"><span id="prog"></span></div>
 </header>
 <div id="map" role="application" aria-label="Kort over Rosenbakken og Rosenvænget"></div>
-<div class="legend">Tryk på et hus for at krydse af. Stiplet kant = placering anslået.</div>
+<div class="legend">Tryk på et hus for at krydse af. Stiplet kant = placering anslået.<br><span class="src">Kortdata: Klimadatastyrelsen</span></div>
 <div class="confirm" id="confirm" hidden>
   <p>Fjern alle flueben?</p>
   <button id="no" type="button">Annullér</button>
@@ -834,12 +835,12 @@ const MAP = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAkGBwgHBgkI
 const HOUSES = [
   ["RB 3",1187,1020],["RB 5A",1150,1057],["RB 17",982,938,1],["RB 22",630,462,1],
   ["RB 25",980,835],["RB 34",673,407],["RB 36",610,328],["RB 38",645,275],
-  ["RB 44",830,385],["RB 45",620,738,1],["RB 53",621,625],["RB 55",645,585,1],
+  ["RB 44",830,385],["RB 45",620,738,1],["RB 53",621,625],["RB 55",545,545],
   ["RB 63",385,615],["RB 67",481,497],["RB 70",483,205],["RB 73",327,505],
   ["RB 85",337,360],["RB 86",508,370],["RB 94",168,80],["RB 99",108,343],
   ["RB 101",62,302],
   ["RV 4",1080,705],["RV 6",1130,655],["RV 7",822,627],["RV 18",1493,432],
-  ["RV 20",1477,503],["RV 29",1005,440,1],["RV 45",1022,320],["RV 63",1447,308]
+  ["RV 20",1477,503],["RV 29",995,372],["RV 45",1022,320],["RV 63",1447,308]
 ];
 const KEY = "rosen-runden-2026";
 let done = new Set();
